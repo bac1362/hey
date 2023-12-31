@@ -1,0 +1,10 @@
+getgenv().stop = false
+
+while game:GetService("RunService").RenderStepped:wait() do
+   if not getgenv().stop then
+       game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-287, 239, 154)
+       game:GetService("ReplicatedStorage").Remotes.Freeze:FireServer()
+   else
+       break
+   end
+end
